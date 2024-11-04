@@ -5,7 +5,7 @@ description = "This is a template example for python packages"
 authors = ["samet <samettaspinarx@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.3"
