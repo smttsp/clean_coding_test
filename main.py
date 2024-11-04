@@ -69,6 +69,15 @@ def main(fp_list):
 
 
 if __name__ == "__main__":
-    f_paths = ["file1.pdf", "file2.txt", "file3.docx", "file4.json"]  # Example file paths
+    f_paths = [
+        "_data/sample.pdf",
+        "_data/sample.txt",
+        "_data/sample.docx",
+        "_data/sample.json"
+        "_data/sample2.pdf",
+        "_data/sample2.txt",
+        "_data/sample2.docx",
+        "_data/sample2.json"
+    ]
 
     main(f_paths)
