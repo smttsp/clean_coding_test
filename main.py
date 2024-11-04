@@ -15,7 +15,6 @@ def main(fp_list):
     for fp in fp_list:
         chunks = []
         if ".pdf" in fp:
-            # Reading PDF files
             print(f"Opening PDF file: {fp}")
             f = open(fp, 'rb')
             rdr = PyPDF2.PdfReader(f)
@@ -25,10 +24,7 @@ def main(fp_list):
                 page_dict[pg_num + 1] = page_content
                 print(f"Processed page {pg_num + 1} of PDF {fp}")
             out_dict["pdfs"][fp] = page_dict
-            # Note: File is not being closed
-
         elif ".txt" in fp:
-            # Reading text files
             print(f"Opening text file: {fp}")
             f = open(fp, 'r', encoding='utf-8')
             cnt = f.read()
@@ -37,10 +33,8 @@ def main(fp_list):
                 chunks.append(chunk)
                 print(f"Processed chunk {i // 1000 + 1} of text file {fp}")
             out_dict["texts"][fp] = chunks
-            # Note: File is not being closed
 
         elif ".docx" in fp:
-            # Reading Word documents
             print(f"Opening Word document: {fp}")
             d = docx.Document(fp)
             cnt = ""
@@ -53,7 +47,6 @@ def main(fp_list):
             out_dict["word_docs"][fp] = chunks
 
         elif ".json" in fp:
-            # Reading JSON files
             print(f"Opening JSON file: {fp}")
             f = open(fp, 'r', encoding='utf-8')
             data = json.load(f)
@@ -63,7 +56,6 @@ def main(fp_list):
                 chunks.append(chunk)
                 print(f"Processed chunk {i // 1000 + 1} of JSON file {fp}")
             out_dict["json_files"][fp] = chunks
-            # Note: File is not being closed
 
     print("Processed chunks:", out_dict)
 
