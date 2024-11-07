@@ -65,7 +65,7 @@ if __name__ == "__main__":
         "_data/sample.pdf",
         "_data/sample.txt",
         "_data/sample.docx",
-        "_data/sample.json"
+        "_data/sample.json",
         "_data/sample2.pdf",
         "_data/sample2.txt",
         "_data/sample2.docx",
